@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pink Apple Roses</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -18,23 +15,33 @@
             fontFamily: {
               serif: ['"Playfair Display"', 'serif'],
               display: ['"Cinzel"', 'serif'],
+              script: ['"Pinyon Script"', 'cursive'],
               sans: ['"Inter"', 'sans-serif'],
             },
             colors: {
+              // New Palette
+              brand: {
+                alabaster: '#DBDBDB',
+                silver: '#B0B5B3',
+                dim: '#706F6F',
+                electric: '#EF27A6',
+                brilliant: '#FF299C',
+              },
+              // Legacy/Base mappings updated to new palette
               rose: {
                 50: '#fff1f2',
                 100: '#ffe4e6',
-                200: '#fecdd3',
-                300: '#fda4af',
-                400: '#fb7185',
-                500: '#f43f5e',
-                900: '#881337',
-                950: '#4c0519',
+                200: '#fbcfe8',
+                300: '#f9a8d4',
+                400: '#f472b6',
+                500: '#FF299C', // Brilliant Rose
+                600: '#EF27A6', // Electric Rose
+                900: '#706F6F', // Dim Grey as dark base
+                950: '#4a044e',
               },
               luxury: {
                 black: '#0a0a0a',
-                charcoal: '#1c1917',
-                gold: '#d4af37',
+                charcoal: '#706F6F',
               }
             },
             animation: {
@@ -60,19 +67,28 @@
         background: #0a0a0a;
       }
       ::-webkit-scrollbar-thumb {
-        background: #333;
+        background: #706F6F;
         border-radius: 4px;
       }
       body {
         background-color: #0a0a0a;
-        color: #fff1f2;
+        color: #DBDBDB;
         overflow-x: hidden;
       }
     </style>
-  </head>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+  }
+}
+</script>
+</head>
   <body>
     <div id="root"></div>
-    
-    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
